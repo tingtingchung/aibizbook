@@ -1,4 +1,4 @@
-Chapter 10: Large Language Models
+Chapter 10: Large Language Models  
 [Lecture: GenAI & LLM](https://www.dropbox.com/scl/fi/f3sp3wzl65apb9l7filpl/AIBiz-W4-GenAI.pptx?rlkey=vfo0xhc2itqfuwflmva8um3u8&dl=0)    
 [Attention in Excel video tutorial by Dr. Chung](https://youtu.be/QLLg5ojxdGE)  
 [Attention in Excel template file](https://www.dropbox.com/scl/fi/tder1w61n7hhj3udzxxrf/Attention-in-Excel-by-Chung.xlsx?rlkey=jbbcl8avrbnts1lguykg891kz&dl=0)  
