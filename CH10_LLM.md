@@ -1,6 +1,6 @@
-*Chapter 10: Large Language Models  
+Chapter 10: Large Language Models  
 
-Attention inn Excel  
+Exercise: Attention in Excel  
 [Worksheet: Attention in Excel](https://docs.google.com/document/d/188r7gkruEYt2sYw08nMWKXcC4BBVYDvtlk51ny6JnRU/edit?tab=t.0)  
 [Demo: TikTokenizer](https://tiktokenizer.vercel.app/)  
 [AI Functions in Google Sheets](https://docs.google.com/spreadsheets/d/135imETGRjCaRL2Dc1HSoM_-X4P16GtyXKdOn0qTrfXc/edit?gid=1077991693#gid=1077991693)  
