@@ -1,4 +1,4 @@
-[AI for Business textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 10: Large Language Models  
+[AI for Business](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 10: Large Language Models  
 
 Exercise: Attention in Excel  
 [SIGDSA 2025](https://www.dropbox.com/scl/fi/crmuf3iyvyevrm8w7jlsm/preicis_sigdsa2025_Attention_in_Excel_Chung.pptx?rlkey=abpppdn0l1nsj07qjyz0cyvfr&dl=0)  
