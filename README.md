@@ -1,7 +1,7 @@
 # aibizbook
 This is an online repository of resources for the [AI for Business textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) by Chung &amp; Hojnicki.
 
-Praises
+**Praises**  
 "I really appreciate the business centered framing of this textbook. Clear positioning at the intersection of AI and business. Unlike most AI/ML texts that are heavily CS-oriented, this book anchors each topic in functional business domains and real-world cases."  
 
 "I really appreciated the thoughtful presentation of foundational topics in a way that avoids overwhelming the reader. The chapter does a great job breaking down core math concepts such as dot products, gradients, and probability into digestible explanations supported by examples. The section on python is also well-executed and very relevant to students who will use these tools directly in their coursework."  
