@@ -4,7 +4,7 @@ Exercise: Attention in Excel
 [Virginia AI Symposium 2026 deck](https://www.dropbox.com/scl/fi/1e7gz45i98vmorynmhey5/VAAI_Attention_in_Excel_Chung.pptx?rlkey=oqg0feuo2crsfz7xcgpvkxkaw&dl=0)  
   
 Print or download the worksheet to following along  
-[Worksheet: Attention in Excel](https://docs.google.com/document/d/188r7gkruEYt2sYw08nMWKXcC4BBVYDvtlk51ny6JnRU/edit?tab=t.0) [(solution)](https://docs.google.com/document/d/1A5pZrTT0s-mPAK293yLP8ownXJRANCitRqP-CnrqrIM/edit?tab=t.0)    
+[Worksheet: Attention in Excel](https://docs.google.com/document/d/188r7gkruEYt2sYw08nMWKXcC4BBVYDvtlk51ny6JnRU/edit?tab=t.0) [PDF version](https://www.dropbox.com/scl/fi/rokudrms8x5fnhxi53kq4/CH10-Worksheet_-Attention-in-Excel.pdf?rlkey=soo6jjwucdrhjsahpb2x4wpue&dl=0) [(solution)](https://docs.google.com/document/d/1A5pZrTT0s-mPAK293yLP8ownXJRANCitRqP-CnrqrIM/edit?tab=t.0)    
   
 Agenda  
 [Step 0: Small Language Model](https://www.cs.cmu.edu/~pvirtue/AIS/dev/ngrams/ngrams.html)  
