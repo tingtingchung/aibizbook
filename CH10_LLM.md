@@ -2,7 +2,7 @@ These learning materials are based on [AI for Business](https://www.vitalsource.
 
 Slidedeck: [Attention in Excel](https://www.dropbox.com/scl/fi/1e7gz45i98vmorynmhey5/VAAI_Attention_in_Excel_Chung.pptx?rlkey=oqg0feuo2crsfz7xcgpvkxkaw&dl=0)  
   
-Print or download the worksheet to following along  
+Print or download the worksheet to follow along  
 [Worksheet: Attention in Excel](https://docs.google.com/document/d/188r7gkruEYt2sYw08nMWKXcC4BBVYDvtlk51ny6JnRU/edit?tab=t.0) [PDF version](https://www.dropbox.com/scl/fi/upei88b4bxudly5k3tmpw/CH10-Worksheet_-Attention-in-Excel.pdf?rlkey=wxl7qepkz3ybzai5yfim3ua1x&dl=0) [(solution)](https://docs.google.com/document/d/1A5pZrTT0s-mPAK293yLP8ownXJRANCitRqP-CnrqrIM/edit?tab=t.0)    
   
 Agenda  
