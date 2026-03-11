@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Timeline of Key AI Milestones</title>
+
+<!-- Social media preview (Open Graph + Twitter Card) -->
+<meta property="og:title" content="Timeline of Key AI Milestones">
+<meta property="og:description" content="An interactive timeline spanning 1936 to 2025 — from the Turing Machine to the Age of Agentic AI.">
+<meta property="og:image" content="https://tingtingchung.github.io/aibizbook/ai-timeline-interactive.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="2550">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Timeline of Key AI Milestones">
+<meta name="twitter:description" content="An interactive timeline spanning 1936 to 2025 — from the Turing Machine to the Age of Agentic AI.">
+<meta name="twitter:image" content="https://tingtingchung.github.io/aibizbook/ai-timeline-interactive.png">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow-y: auto; height: auto; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #ffffff;
+    color: #414141;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: linear-gradient(180deg, #f7ebf0 0%, #ffffff 100%);
+  }
+  .header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #04907e;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .header p { color: #777; font-size: 0.95rem; font-weight: 300; }
+  .hint { text-align: center; color: #999; font-size: 0.8rem; padding: 12px 0 20px; }
+
+  /* Era filter buttons */
+  .filters {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 8px; padding: 0 20px 30px; max-width: 900px; margin: 0 auto;
+  }
+  .filter-btn {
+    padding: 6px 16px; border-radius: 20px; border: 1px solid;
+    font-family: inherit; font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; transition: all 0.25s; text-transform: uppercase;
+    letter-spacing: 0.5px; background: transparent;
+  }
+  .filter-btn.active { filter: brightness(1); }
+  .filter-btn:not(.active) { opacity: 0.35; }
+  .filter-btn[data-era="all"] { color: #414141; border-color: rgba(65,65,65,0.25); }
+  .filter-btn[data-era="all"].active { background: rgba(65,65,65,0.08); }
+  .filter-btn[data-era="foundations"] { color: #04907e; border-color: rgba(4,144,126,0.3); }
+  .filter-btn[data-era="foundations"].active { background: rgba(4,144,126,0.08); }
+  .filter-btn[data-era="early"] { color: #c31e56; border-color: rgba(195,30,86,0.3); }
+  .filter-btn[data-era="early"].active { background: rgba(195,30,86,0.08); }
+  .filter-btn[data-era="winters"] { color: #888; border-color: rgba(136,136,136,0.3); }
+  .filter-btn[data-era="winters"].active { background: rgba(136,136,136,0.08); }
+  .filter-btn[data-era="ml"] { color: #b8860b; border-color: rgba(254,213,0,0.5); }
+  .filter-btn[data-era="ml"].active { background: rgba(254,213,0,0.12); }
+  .filter-btn[data-era="bigdata"] { color: #04907e; border-color: rgba(4,144,126,0.3); }
+  .filter-btn[data-era="bigdata"].active { background: rgba(4,144,126,0.08); }
+  .filter-btn[data-era="llm"] { color: #c31e56; border-color: rgba(195,30,86,0.3); }
+  .filter-btn[data-era="llm"].active { background: rgba(195,30,86,0.08); }
+
+  /* Timeline layout */
+  .timeline-wrapper {
+    max-width: 1100px; margin: 0 auto; padding: 0 30px 60px; position: relative;
+  }
+  .timeline-line {
+    position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(180deg, #04907e, #c31e56, #aaa, #d4a800, #04907e, #c31e56);
+    opacity: 0.25; transform: translateX(-50%);
+  }
+
+  .milestone {
+    display: flex; align-items: flex-start; margin-bottom: 0;
+    position: relative; opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease, margin 0.4s ease;
+    max-height: 300px; overflow: hidden;
+  }
+  .milestone.hidden {
+    opacity: 0; max-height: 0; margin-bottom: 0 !important; pointer-events: none;
+    transform: scale(0.95);
+  }
+  .milestone.left { flex-direction: row; }
+  .milestone.right { flex-direction: row-reverse; }
+
+  .card {
+    width: 44%; padding: 18px 22px; border-radius: 14px;
+    background: #f8f8f8; border: 1px solid #e2e2e2;
+    transition: all 0.3s ease; cursor: pointer; text-decoration: none; display: block;
+    position: relative; color: #414141;
+  }
+  .card:hover {
+    background: #f0f0f0; border-color: #ccc;
+    transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+  .card:active { transform: translateY(-1px); }
+
+  .center-col {
+    width: 12%; display: flex; flex-direction: column; align-items: center;
+    position: relative; z-index: 2; padding-top: 18px; min-width: 50px;
+  }
+  .dot {
+    width: 16px; height: 16px; border-radius: 50%; border: 2.5px solid;
+    background: #ffffff; flex-shrink: 0; transition: all 0.3s;
+  }
+  .dot.major { width: 20px; height: 20px; }
+  .milestone:hover .dot { transform: scale(1.4); }
+
+  .spacer { width: 44%; }
+
+  .year { font-size: 0.85rem; font-weight: 700; margin-bottom: 3px; }
+  .title { font-size: 0.95rem; font-weight: 600; color: #2a2a2a; margin-bottom: 5px; line-height: 1.3; }
+  .desc { font-size: 0.8rem; color: #666; line-height: 1.55; font-weight: 300; }
+  .link-hint {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-top: 10px; font-size: 0.72rem; font-weight: 500;
+    opacity: 0; transition: opacity 0.3s;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .card:hover .link-hint { opacity: 1; }
+  .link-hint svg { width: 12px; height: 12px; }
+
+  /* Era colors — Prospect Press palette */
+  .era-foundations .dot { border-color: #04907e; box-shadow: 0 0 10px rgba(4,144,126,0.3); }
+  .era-foundations .dot.major { background: #04907e; }
+  .era-foundations .year { color: #04907e; }
+  .era-foundations .link-hint { color: #04907e; }
+  .era-foundations .card:hover { border-color: rgba(4,144,126,0.35); }
+
+  .era-early .dot { border-color: #c31e56; box-shadow: 0 0 10px rgba(195,30,86,0.3); }
+  .era-early .dot.major { background: #c31e56; }
+  .era-early .year { color: #c31e56; }
+  .era-early .link-hint { color: #c31e56; }
+  .era-early .card:hover { border-color: rgba(195,30,86,0.35); }
+
+  .era-winters .dot { border-color: #999; box-shadow: 0 0 8px rgba(136,136,136,0.25); }
+  .era-winters .year { color: #888; }
+  .era-winters .link-hint { color: #888; }
+  .era-winters .card:hover { border-color: rgba(136,136,136,0.35); }
+
+  .era-ml .dot { border-color: #d4a800; box-shadow: 0 0 10px rgba(254,213,0,0.35); }
+  .era-ml .dot.major { background: #d4a800; }
+  .era-ml .year { color: #b8860b; }
+  .era-ml .link-hint { color: #b8860b; }
+  .era-ml .card:hover { border-color: rgba(254,213,0,0.45); }
+
+  .era-bigdata .dot { border-color: #04907e; box-shadow: 0 0 10px rgba(4,144,126,0.3); }
+  .era-bigdata .dot.major { background: #04907e; }
+  .era-bigdata .year { color: #04907e; }
+  .era-bigdata .link-hint { color: #04907e; }
+  .era-bigdata .card:hover { border-color: rgba(4,144,126,0.35); }
+
+  .era-llm .dot { border-color: #c31e56; box-shadow: 0 0 10px rgba(195,30,86,0.3); }
+  .era-llm .dot.major { background: #c31e56; }
+  .era-llm .year { color: #c31e56; }
+  .era-llm .link-hint { color: #c31e56; }
+  .era-llm .card:hover { border-color: rgba(195,30,86,0.35); }
+
+  /* Era section headers */
+  .era-header {
+    text-align: center; margin: 30px 0 20px; position: relative; z-index: 2;
+    transition: opacity 0.4s, max-height 0.4s; max-height: 80px; overflow: hidden;
+  }
+  .era-header.hidden { opacity: 0; max-height: 0; margin: 0; }
+  .era-header span {
+    display: inline-block; padding: 8px 24px; border-radius: 30px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+  }
+  .era-header.foundations span { background: rgba(4,144,126,0.08); color: #04907e; border: 1px solid rgba(4,144,126,0.2); }
+  .era-header.early span { background: rgba(195,30,86,0.08); color: #c31e56; border: 1px solid rgba(195,30,86,0.2); }
+  .era-header.winters span { background: rgba(136,136,136,0.08); color: #888; border: 1px solid rgba(136,136,136,0.2); }
+  .era-header.ml span { background: rgba(254,213,0,0.1); color: #b8860b; border: 1px solid rgba(254,213,0,0.35); }
+  .era-header.bigdata span { background: rgba(4,144,126,0.08); color: #04907e; border: 1px solid rgba(4,144,126,0.2); }
+  .era-header.llm span { background: rgba(195,30,86,0.08); color: #c31e56; border: 1px solid rgba(195,30,86,0.2); }
+
+  .footer {
+    text-align: center; padding: 30px 20px 50px; color: #aaa; font-size: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-line { left: 24px; }
+    .milestone, .milestone.left, .milestone.right { flex-direction: row !important; }
+    .center-col { width: 48px; min-width: 48px; }
+    .card { width: 100% !important; }
+    .spacer { display: none; }
+    .header h1 { font-size: 1.5rem; }
+    .filters { gap: 6px; }
+    .filter-btn { padding: 5px 12px; font-size: 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Timeline of Key AI Milestones</h1>
+  <p>From the Conceptual Foundation to the Age of Agentic AI</p>
+</div>
+<div class="hint">Click any milestone to read the original publication or primary source</div>
+
+<div class="filters">
+  <button class="filter-btn active" data-era="all">All Eras</button>
+  <button class="filter-btn active" data-era="foundations">Foundations</button>
+  <button class="filter-btn active" data-era="early">Early AI</button>
+  <button class="filter-btn active" data-era="winters">AI Winters</button>
+  <button class="filter-btn active" data-era="ml">Rise of ML</button>
+  <button class="filter-btn active" data-era="bigdata">Big Data &amp; Compute</button>
+  <button class="filter-btn active" data-era="llm">LLMs &amp; Agents</button>
+</div>
+
+<div class="timeline-wrapper">
+  <div class="timeline-line"></div>
+
+  <!-- === FOUNDATIONS 1930s-1950s === -->
+  <div class="era-header foundations" data-era="foundations"><span>The Conceptual Foundation &mdash; 1930s&ndash;1950s</span></div>
+
+  <div class="milestone left era-foundations" data-era="foundations">
+    <a class="card" href="https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/plms/s2-42.1.230" target="_top" rel="noopener">
+      <div class="year">1936</div>
+      <div class="title">Turing Machine</div>
+      <div class="desc">Alan Turing proposes a theoretical device that manipulates symbols on a strip of tape, modeling the logic of any computer algorithm &mdash; a foundational concept in computer science.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Original Paper</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-foundations" data-era="foundations">
+    <a class="card" href="https://link.springer.com/article/10.1007/BF02478259" target="_top" rel="noopener">
+      <div class="year">1943</div>
+      <div class="title">McCulloch-Pitts Neuron</div>
+      <div class="desc">Warren McCulloch and Walter Pitts create a mathematical model showing how connected artificial neurons could perform logical operations &mdash; laying the groundwork for neural networks.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Original Paper</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone left era-foundations" data-era="foundations">
+    <a class="card" href="https://courses.cs.umbc.edu/471/papers/turing.pdf" target="_top" rel="noopener">
+      <div class="year">1950</div>
+      <div class="title">Turing Test</div>
+      <div class="desc">Alan Turing publishes "Computing Machinery and Intelligence," proposing the Turing test to evaluate whether a machine can exhibit intelligent behavior indistinguishable from a human.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Original Paper (PDF)</span>
+    </a>
+    <div class="center-col"><div class="dot"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <!-- === EARLY AI 1950s-1970s === -->
+  <div class="era-header early" data-era="early"><span>Early AI Programs &mdash; 1950s&ndash;1970s</span></div>
+
+  <div class="milestone right era-early" data-era="early">
+    <a class="card" href="http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf" target="_top" rel="noopener">
+      <div class="year">1956</div>
+      <div class="title">"Artificial Intelligence" Coined</div>
+      <div class="desc">John McCarthy coins the term at the Dartmouth Summer Research Project on AI &mdash; the first conference devoted to AI. Simon and Newell's Logic Theorist, the first AI program, is also presented.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Dartmouth Proposal (PDF)</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone left era-early" data-era="early">
+    <a class="card" href="https://psycnet.apa.org/record/1959-09865-001" target="_top" rel="noopener">
+      <div class="year">1957</div>
+      <div class="title">The Perceptron</div>
+      <div class="desc">Frank Rosenblatt develops the perceptron &mdash; an early neural network with adjustable weights that could learn to classify data, showcasing the potential of neural networks for pattern recognition.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> APA PsycNet Record</span>
+    </a>
+    <div class="center-col"><div class="dot"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-early" data-era="early">
+    <a class="card" href="https://www.shortliffe.net/Buchanan-Shortliffe-1984/MYCIN%20Book.htm" target="_top" rel="noopener">
+      <div class="year">1960s&ndash;1970s</div>
+      <div class="title">Symbolic AI &amp; Expert Systems</div>
+      <div class="desc">AI research focuses on rule-based reasoning. The MYCIN expert system uses ~600 rules to identify bacteria causing infections &mdash; groundbreaking, but limited by rigid knowledge encoding.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> MYCIN Book</span>
+    </a>
+    <div class="center-col"><div class="dot"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <!-- === AI WINTERS === -->
+  <div class="era-header winters" data-era="winters"><span>The AI Winters &mdash; 1970s&ndash;1990s</span></div>
+
+  <div class="milestone left era-winters" data-era="winters">
+    <a class="card" href="https://en.wikipedia.org/wiki/AI_winter" target="_top" rel="noopener">
+      <div class="year">1970s&ndash;1990s</div>
+      <div class="title">Reduced Funding &amp; Interest</div>
+      <div class="desc">Unrealistic expectations lead to disillusionment. In a 1970 Life magazine interview, Minsky predicted general intelligence within years &mdash; but it didn't materialize. Neural network enthusiasm waned.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Wikipedia (AI Winter)</span>
+    </a>
+    <div class="center-col"><div class="dot"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <!-- === RISE OF ML === -->
+  <div class="era-header ml" data-era="ml"><span>Rise of Machine Learning &mdash; 1980s&ndash;1990s</span></div>
+
+  <div class="milestone right era-ml" data-era="ml">
+    <a class="card" href="https://www.nature.com/articles/323533a0" target="_top" rel="noopener">
+      <div class="year">1986</div>
+      <div class="title">Backpropagation</div>
+      <div class="desc">David Rumelhart, Geoffrey Hinton, and Ronald Williams publish a calculus-based method for training neural networks by computing each parameter's contribution to error &mdash; making modern deep learning possible.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Nature (1986)</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone left era-ml" data-era="ml">
+    <a class="card" href="https://proceedings.neurips.cc/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf" target="_top" rel="noopener">
+      <div class="year">1989</div>
+      <div class="title">LeNet (CNNs)</div>
+      <div class="desc">Yann LeCun demonstrates a convolutional neural network architecture for reading handwritten zip codes from the US Postal Service &mdash; a landmark in practical deep learning.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> NeurIPS Paper (PDF)</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-ml" data-era="ml">
+    <a class="card" href="https://www.ibm.com/history/deep-blue" target="_top" rel="noopener">
+      <div class="year">1997</div>
+      <div class="title">Deep Blue Defeats Kasparov</div>
+      <div class="desc">IBM's Deep Blue defeats world chess champion Garry Kasparov 3&frac12;&ndash;2&frac12;, marking a major milestone in AI's ability to master complex strategic games.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> IBM History</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <!-- === BIG DATA & COMPUTE === -->
+  <div class="era-header bigdata" data-era="bigdata"><span>Rise of Big Data &amp; Big Compute &mdash; 2000s&ndash;2010s</span></div>
+
+  <div class="milestone left era-bigdata" data-era="bigdata">
+    <a class="card" href="https://www.nvidia.com/en-us/geforce/graphics-cards/geforce-256/" target="_top" rel="noopener">
+      <div class="year">1999</div>
+      <div class="title">GPU (NVIDIA)</div>
+      <div class="desc">NVIDIA releases the GeForce 256, marketed as the world's first GPU. GPUs' ability to handle parallel operations makes them transformative for AI computation.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> NVIDIA</span>
+    </a>
+    <div class="center-col"><div class="dot"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-bigdata" data-era="bigdata">
+    <a class="card" href="https://developer.nvidia.com/cuda-toolkit" target="_top" rel="noopener">
+      <div class="year">2006</div>
+      <div class="title">NVIDIA CUDA</div>
+      <div class="desc">NVIDIA introduces Compute Unified Device Architecture (CUDA), enabling developers to run complex AI computations on GPUs efficiently &mdash; a pivotal moment for deep learning research.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> NVIDIA Developer</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone left era-bigdata" data-era="bigdata">
+    <a class="card" href="https://www.image-net.org/static_files/papers/imagenet_cvpr09.pdf" target="_top" rel="noopener">
+      <div class="year">2009</div>
+      <div class="title">ImageNet</div>
+      <div class="desc">Fei-Fei Li's ImageNet provides a large-scale annotated database of millions of images, proving crucial for deep learning breakthroughs in image recognition.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> CVPR Paper (PDF)</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-bigdata" data-era="bigdata">
+    <a class="card" href="https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html" target="_top" rel="noopener">
+      <div class="year">2012</div>
+      <div class="title">AlexNet</div>
+      <div class="desc">Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton's AlexNet wins the ImageNet challenge by a dramatic margin, igniting the modern deep learning era.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> NeurIPS Paper</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone left era-bigdata" data-era="bigdata">
+    <a class="card" href="https://www.nature.com/articles/nature16961" target="_top" rel="noopener">
+      <div class="year">2016</div>
+      <div class="title">AlphaGo Defeats Lee Sedol</div>
+      <div class="desc">Google DeepMind's AlphaGo defeats professional Go player Lee Sedol 4&ndash;1, combining deep learning with reinforcement learning in a game far more complex than chess.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Nature (2016)</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-bigdata" data-era="bigdata">
+    <a class="card" href="https://amturing.acm.org/award_winners/bengio_3406375.cfm" target="_top" rel="noopener">
+      <div class="year">2018</div>
+      <div class="title">Turing Award: Hinton, LeCun &amp; Bengio</div>
+      <div class="desc">Geoffrey Hinton, Yann LeCun, and Yoshua Bengio receive the ACM Turing Award for their conceptual and engineering breakthroughs in deep learning.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> ACM Turing Award</span>
+    </a>
+    <div class="center-col"><div class="dot"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <!-- === LLMs & AGENTIC AI === -->
+  <div class="era-header llm" data-era="llm"><span>GPT Series, LLMs &amp; Agentic AI &mdash; 2017&ndash;Present</span></div>
+
+  <div class="milestone left era-llm" data-era="llm">
+    <a class="card" href="https://arxiv.org/abs/1706.03762" target="_top" rel="noopener">
+      <div class="year">2017</div>
+      <div class="title">Transformer Architecture</div>
+      <div class="desc">Google researchers publish "Attention Is All You Need," introducing the Transformer &mdash; the foundational architecture underlying virtually all modern large language models.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> arXiv Paper</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-llm" data-era="llm">
+    <a class="card" href="https://arxiv.org/abs/2005.14165" target="_top" rel="noopener">
+      <div class="year">2020</div>
+      <div class="title">GPT-3</div>
+      <div class="desc">OpenAI's GPT-3, with 175 billion parameters, marks a revolution in natural language processing, fundamentally shifting how people interact with AI.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> arXiv Paper</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone left era-llm" data-era="llm">
+    <a class="card" href="https://openai.com/index/chatgpt/" target="_top" rel="noopener">
+      <div class="year">2022</div>
+      <div class="title">ChatGPT</div>
+      <div class="desc">OpenAI launches ChatGPT, which reaches 100 million users within two months &mdash; the fastest-growing consumer application in history, bringing generative AI into the mainstream.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> OpenAI Announcement</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-llm" data-era="llm">
+    <a class="card" href="https://arxiv.org/abs/2303.17564" target="_top" rel="noopener">
+      <div class="year">2023</div>
+      <div class="title">Generative AI Renaissance</div>
+      <div class="desc">Bloomberg releases BloombergGPT for finance. Organizations across all sectors announce generative AI and LLM initiatives, starting a new era in AI history.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> BloombergGPT (arXiv)</span>
+    </a>
+    <div class="center-col"><div class="dot"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone left era-llm" data-era="llm">
+    <a class="card" href="https://www.nobelprize.org/prizes/physics/2024/" target="_top" rel="noopener">
+      <div class="year">2024</div>
+      <div class="title">Nobel Prizes for AI Scientists</div>
+      <div class="desc">Nobel Prize in Physics to Hopfield &amp; Hinton for neural networks. Nobel Prize in Chemistry to Hassabis, Jumper &amp; Baker for AlphaFold's protein structure prediction.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> NobelPrize.org</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="milestone right era-llm" data-era="llm">
+    <a class="card" href="https://arxiv.org/abs/2503.15398" target="_top" rel="noopener">
+      <div class="year">2025</div>
+      <div class="title">The Age of Agentic AI</div>
+      <div class="desc">LLMs become agentic &mdash; capable of web search, tool use, and accessing knowledge bases. Coding agents allow engineers to delegate entire workflows to AI.</div>
+      <span class="link-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Agentic AI Survey (arXiv)</span>
+    </a>
+    <div class="center-col"><div class="dot major"></div></div>
+    <div class="spacer"></div>
+  </div>
+
+</div>
+
+<div class="footer">Figure 1-9: Timeline of Key AI Milestones</div>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const milestones = document.querySelectorAll('.milestone');
+  const headers = document.querySelectorAll('.era-header');
+  let allActive = true;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const era = btn.dataset.era;
+
+      if (era === 'all') {
+        allActive = !allActive;
+        buttons.forEach(b => {
+          if (allActive) b.classList.add('active');
+          else if (b.dataset.era === 'all') b.classList.add('active');
+          else b.classList.remove('active');
+        });
+      } else {
+        btn.classList.toggle('active');
+        const anyEraActive = [...buttons].some(b => b.dataset.era !== 'all' && b.classList.contains('active'));
+        const allErasActive = [...buttons].filter(b => b.dataset.era !== 'all').every(b => b.classList.contains('active'));
+        buttons[0].classList.toggle('active', allErasActive);
+        allActive = allErasActive;
+      }
+
+      const activeEras = new Set([...buttons].filter(b => b.dataset.era !== 'all' && b.classList.contains('active')).map(b => b.dataset.era));
+
+      milestones.forEach(m => {
+        m.classList.toggle('hidden', !activeEras.has(m.dataset.era));
+      });
+      headers.forEach(h => {
+        h.classList.toggle('hidden', !activeEras.has(h.dataset.era));
+      });
+    });
+  });
+</script>
+</body>
+</html>
