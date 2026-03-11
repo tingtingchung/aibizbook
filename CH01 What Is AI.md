@@ -9,5 +9,5 @@
 **AI History**  
 [Interactive Timeline of Key AI History Milestones](https://tingtingchung.github.io/aihistory)  
 
-Workshop Materials
+**Workshop Materials**  
 [Pitt Psych: How AI Works](https://www.dropbox.com/scl/fi/6y23z0p9z9irymddaqnyj/Pitt-Psych-2026-Chung-How-AI-Wrks.pptx?rlkey=piay0s5fqdn1qz13mhas994u1&dl=0)  
