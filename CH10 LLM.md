@@ -14,5 +14,3 @@ Agenda
   
 [Step 4: Attention in Excel template Google Sheets file](https://docs.google.com/spreadsheets/d/1fovf2ednHXxvo0fmVwa-LmVLK_4OI840/edit?gid=1293909254#gid=1293909254)   
 - [Attention in Excel video tutorial by Dr. Chung](https://youtu.be/QLLg5ojxdGE)  
-  
-[Step 5: Share your feedback on this workshop](https://docs.google.com/forms/d/e/1FAIpQLSdvJ-_sBtnKleIUcG4aQz-oepLtwn1KEsAJEYzIRe0wuSICkQ/viewform?usp=header)  
