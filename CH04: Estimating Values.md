@@ -7,5 +7,5 @@
 [Single Neuron Simulator worksheet: Loan Applications](https://docs.google.com/document/d/1VUxvhrI8i_2mxxIqB9e4Y2RZPk69Id76yiddq302e8U/edit?tab=t.0) [solution](https://docs.google.com/document/d/1EKOux3ee7yfh7YKC34j9RmToJwmKgKAvk8Bm0FwXSy8/edit?tab=t.0) [video tutorial](https://www.youtube.com/watch?v=Q7X6DnCKcW4)
 
 **Workshop Materials**  
-[CMU Heinz: From Predicting Future Criminals to GPTs]
+[CMU Heinz: From Predicting Future Criminals to GPTs](https://www.dropbox.com/scl/fi/norhw8navh39mfatalzzo/CMU-Heinz-2026-Chung.pptx?rlkey=pncul9h3po8vvp31ax3pagqm9&dl=0)  
 [Pitt Psych: How AI Works](https://www.dropbox.com/scl/fi/6y23z0p9z9irymddaqnyj/Pitt-Psych-2026-Chung-How-AI-Wrks.pptx?rlkey=piay0s5fqdn1qz13mhas994u1&dl=0)  
