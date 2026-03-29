@@ -15,3 +15,12 @@ These learning materials are based on [AI for Business](https://www.vitalsource.
   
 [Step 4: Attention in Excel template Google Sheets file](https://docs.google.com/spreadsheets/d/1fovf2ednHXxvo0fmVwa-LmVLK_4OI840/edit?gid=1293909254#gid=1293909254)   
 - [Attention in Excel video tutorial by Dr. Chung](https://youtu.be/QLLg5ojxdGE)  
+
+**Colabs**  
+[Using the Transformer with IMDB Movie Reviews](https://colab.research.google.com/drive/1D-tfr2kzpMSCLyU2enNWzVDdH5-Xu3Xg)  
+[Using a Pre-Trained LLM](https://colab.research.google.com/drive/15-3cP5UhL7CqPDXWEXA6JzmrB3YQZe0e)  
+[FinBERT: Using a Fine-Tuned Model](https://www.dropbox.com/scl/fi/p2zbxxracxqxzltp03n5c/CH10-2-LLM-Agents.pptx?rlkey=78hatelg7iy0oxub2i0lal89p&dl=0)  
+[Building LLM Agents with LangChain](https://colab.research.google.com/drive/17gA1wr_0SNgjxFby8r5BIbeuziIbZKt8)  
+
+**Exercise**  
+[Create an LLM agentic system with a skill folder](https://docs.google.com/document/d/1ew-q7X8UznQX6kBWhbcv4x4Z5fWQRLwZOZOny5VoCuE/edit?tab=t.0)  
