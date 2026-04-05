@@ -16,7 +16,8 @@ These learning materials are based on [AI for Business](https://www.vitalsource.
 - [Softmax video tutorial by Dr. Chung](https://youtu.be/kMetpM6BKmQ) 
 [Step 4: Attention in Excel template Google Sheets file](https://docs.google.com/spreadsheets/d/1fovf2ednHXxvo0fmVwa-LmVLK_4OI840/edit?gid=1293909254#gid=1293909254)   
 - [Attention in Excel video tutorial by Dr. Chung](https://youtu.be/QLLg5ojxdGE)  
-
+- [Recap: Transformer Explainer]https://poloclub.github.io/transformer-explainer/)  
+  
 **Colabs**  
 [Using the Transformer with IMDB Movie Reviews](https://colab.research.google.com/drive/1D-tfr2kzpMSCLyU2enNWzVDdH5-Xu3Xg)  
 [Using a Pre-Trained LLM](https://colab.research.google.com/drive/15-3cP5UhL7CqPDXWEXA6JzmrB3YQZe0e)  
