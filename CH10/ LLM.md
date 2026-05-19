@@ -5,7 +5,7 @@ These learning materials are based on [AI for Business](https://www.vitalsource.
 
 **Slidedecks**  
 [CH10-1: Vector Similarity](https://www.dropbox.com/scl/fi/vnn860ptbezpuu03ert0d/M4-1B-vector-similarity.pptx?rlkey=4bl3lcdjaxaj0yr44tafcvxh5&dl=0)  
-[CH10-2: Attention](https://www.dropbox.com/scl/fi/8srngr0z2jrwl6emqrmh2/CH10-Transformer.pptx?rlkey=uwww7wirupnz2qrtxhase6qg0&dl=0)   
+[CH10-2: Transformer](https://www.dropbox.com/scl/fi/8srngr0z2jrwl6emqrmh2/CH10-Transformer.pptx?rlkey=uwww7wirupnz2qrtxhase6qg0&dl=0)   
 [CH10-3: LLM & Agents](https://www.dropbox.com/scl/fi/p2zbxxracxqxzltp03n5c/CH10-2-LLM-Agents.pptx?rlkey=78hatelg7iy0oxub2i0lal89p&dl=0)  
 
 **Demos**  
