@@ -13,7 +13,7 @@ These learning materials are based on [AI for Business](https://www.vitalsource.
 [Step 1: TikTokenizer](https://tiktokenizer.vercel.app/)  
 [Steps 2+3: One-Hot Encoding + Embeddings](https://projector.tensorflow.org/)  
 - [AI Functions in Google Sheets](https://docs.google.com/spreadsheets/d/135imETGRjCaRL2Dc1HSoM_-X4P16GtyXKdOn0qTrfXc/edit?gid=1077991693#gid=1077991693)  
-- [Softmax video tutorial by Dr. Chung](https://youtu.be/kMetpM6BKmQ) 
+- [Softmax video tutorial by Dr. Chung](https://youtu.be/kMetpM6BKmQ)  
 [Step 4: Attention in Excel template Google Sheets file](https://docs.google.com/spreadsheets/d/1fovf2ednHXxvo0fmVwa-LmVLK_4OI840/edit?gid=1293909254#gid=1293909254)   
 - [Attention in Excel video tutorial by Dr. Chung](https://youtu.be/QLLg5ojxdGE)  
 - [Recap: Transformer Explainer](https://poloclub.github.io/transformer-explainer/)  
