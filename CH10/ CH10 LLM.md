@@ -32,3 +32,4 @@ These learning materials are based on [AI for Business](https://bookshelf.vitals
 **References**  
 [Harness Engineering for Coding Agent Users by Birgitta Böckeler](https://martinfowler.com/articles/harness-engineering.html?fbclid=IwY2xjawQ_M7FleHRuA2FlbQIxMABicmlkETFrREdFQjFaSzBBVjBkZWVSc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHk5rjMtVA_cpQSBgauoVaqAp5HzzMc4MQTOlSm0Pbi-Sd1l9hBZJRDVYcQmo_aem_eiN2aJF8OkVnDAuSy6cyJQ)   
 [Agentic Engineering Patterns by Simon Willison](https://simonwillison.net/guides/agentic-engineering-patterns/)  
+[Agents for Business (forthcoming)](https://github.com/tingtingchung/atba/issues/2)  
