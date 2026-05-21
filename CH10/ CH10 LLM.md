@@ -1,4 +1,4 @@
-These learning materials are based on [AI for Business](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 10: Large Language Models  
+These learning materials are based on [AI for Business](https://bookshelf.vitalsource.com/reader/books/9781958303528?library_return_url=https%3A%2F%2Fbookshelf.vitalsource.com%2Fhome%2Fdashboard%3Fcontext%3Dlogin) Chapter 10: Large Language Models  
 
 **Worksheets**  
 [Worksheet: Attention in Excel](https://docs.google.com/document/d/188r7gkruEYt2sYw08nMWKXcC4BBVYDvtlk51ny6JnRU/edit?tab=t.0) [PDF version](https://www.dropbox.com/scl/fi/upei88b4bxudly5k3tmpw/CH10-Worksheet_-Attention-in-Excel.pdf?rlkey=wxl7qepkz3ybzai5yfim3ua1x&dl=0) [(solution)](https://docs.google.com/document/d/1A5pZrTT0s-mPAK293yLP8ownXJRANCitRqP-CnrqrIM/edit?tab=t.0)    
