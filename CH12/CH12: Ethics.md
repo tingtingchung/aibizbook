@@ -16,3 +16,5 @@ These learning materials are based on [AI for Business Textbook](https://www.vit
 [Playing with AI Fairness](https://pair-code.github.io/what-if-tool/ai-fairness.html)  
 [How I'm fighting bias in algorithms by Joy Buolamwini](https://www.ted.com/talks/joy_buolamwini_how_i_m_fighting_bias_in_algorithms)  
 [AI isn't replacing radiologists](https://www.worksinprogress.news/p/why-ai-isnt-replacing-radiologists)  
+
+[Digital Institutions & Fraud](https://www.dropbox.com/scl/fi/1mlodn0ov0rgqumly5v11/Digital-Institutions-AI-Fraud.pptx?rlkey=aecouarnef5tjukhjl7ti9t2s&dl=0)  
