@@ -2,9 +2,9 @@
 This is an online repository of resources for the [AI for Business textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) by Chung &amp; Hojnicki.
 
 **Praises**  
-"I really appreciate the business centered framing of this textbook. Clear positioning at the intersection of AI and business. Unlike most AI/ML texts that are heavily CS-oriented, this book anchors each topic in functional business domains and real-world cases."  
+"I really appreciate the business-centered framing of this textbook. Clear positioning at the intersection of AI and business. Unlike most AI/ML texts that are heavily CS-oriented, this book anchors each topic in functional business domains and real-world cases."  
 
-"I really appreciated the thoughtful presentation of foundational topics in a way that avoids overwhelming the reader. The chapter does a great job breaking down core math concepts such as dot products, gradients, and probability into digestible explanations supported by examples. The section on python is also well-executed and very relevant to students who will use these tools directly in their coursework."  
+"I really appreciated the thoughtful presentation of foundational topics in a way that avoids overwhelming the reader. The chapter does a great job breaking down core math concepts such as dot products, gradients, and probability into digestible explanations supported by examples. The section on Python is also well-executed and very relevant to students who will use these tools directly in their coursework."  
 
 "I also appreciated the conversational tone and the use of relatable analogies (including baking, sports rankings) to introduce otherwise abstract ideas. These examples make the content much more approachable for business students without compromising the technical rigor."  
 
@@ -28,3 +28,4 @@ Reading the chapter with a student mindset, I found myself wanting to spend a no
 
 "I also think the text, as it is developing, is doing a good job of breaking down the material into very digestible pieces for students. This gives students more convenient starting and stopping points to engage with the material. To draw an analogy to reading a novel, I vastly prefer novels with many short chapters/sections to ones with much longer chapters. There’s something about dropping a bookmark at a stopping point created by the author that is very satisfying versus dropping it in the middle of a long section of text out of necessity because I need to stop reading for a while. These shorter, clearly delineated sections also help me set reading goals as I proceed."  
 
+"groundbreaking and well written"
