@@ -5,3 +5,4 @@ These learning materials are based on [AI for Business Textbook](https://www.vit
 
 **Optional References**  
 [Think Linear Algebra by Allen Downey](https://allendowney.github.io/ThinkLinearAlgebra/index.html)  
+[Mathematics in the Age of Artificial Intelligence](https://www.acadmathsci.org.uk/maths-in-the-age-of-ai-why-the-mathematical-sciences-matter-more-than-ever/?fbclid=IwY2xjawSnu2hleHRuA2FlbQIxMABicmlkETFFaG5zTmZHNWMwelJOa3A3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHrDQDh68DzZ7Z7sTp38Pty0u-MdvIO1zv0xsitp1MI5s0kiLuKjHbqy27VMt_aem_XYKjVDSer3EAxDlFcAbr-Q)  
