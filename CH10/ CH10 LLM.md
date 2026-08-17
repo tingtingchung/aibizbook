@@ -27,7 +27,7 @@ These learning materials are based on [AI for Business](https://bookshelf.vitals
 [Building LLM Agents with LangChain](https://colab.research.google.com/drive/17gA1wr_0SNgjxFby8r5BIbeuziIbZKt8)  
 
 **Exercise**  
-[Create an LLM agentic system with a skill folder](https://docs.google.com/document/d/1ew-q7X8UznQX6kBWhbcv4x4Z5fWQRLwZOZOny5VoCuE/edit?tab=t.0)  
+[Create an LLM agentic system with a skill folder](https://docs.google.com/document/d/1zwHRrugvlfTZtYG9aNs6QCwv4x7G4QF7H0Y85ESvB9A/edit?tab=t.0)  
 
 **References**  
 [Harness Engineering for Coding Agent Users by Birgitta Böckeler](https://martinfowler.com/articles/harness-engineering.html?fbclid=IwY2xjawQ_M7FleHRuA2FlbQIxMABicmlkETFrREdFQjFaSzBBVjBkZWVSc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHk5rjMtVA_cpQSBgauoVaqAp5HzzMc4MQTOlSm0Pbi-Sd1l9hBZJRDVYcQmo_aem_eiN2aJF8OkVnDAuSy6cyJQ)   
