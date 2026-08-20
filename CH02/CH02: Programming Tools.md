@@ -1,4 +1,7 @@
-These learning materials are based on [AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 2: Programming Tools  
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 2: Programming Tools  
 
 **Classroom Materials**  
 [Slidedeck: Programming & Math Foundations](https://www.dropbox.com/scl/fi/at6s37m97yhes7gup769x/CH03-Math-Foundations-Part-1-of-2.pptx?rlkey=6if93bllbsk72owbdhvlr1r2n&dl=0)  
