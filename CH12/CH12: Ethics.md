@@ -1,4 +1,7 @@
-These learning materials are based on [AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 12: Ethics  
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 12: Ethics  
 
 **Classroom Materials**  
 [Slidedeck: AI Ethics](https://www.dropbox.com/scl/fi/eawf1bz84q5lmn9zy48px/AIBiz-W5-Ethics.pptx?rlkey=8xe3tuk6s3ity8be4v8ll511v&dl=0)   
