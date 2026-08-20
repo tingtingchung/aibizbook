@@ -1,4 +1,7 @@
-These learning materials are based on [AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 8: Visual Intelligence  
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 8: Visual Intelligence  
 
 **Classroom Materials**  
 [CH08-1: Featurizing Xs](https://www.dropbox.com/scl/fi/tvfkmefnwfvr38hueajp6/CH08-1-CNN1-Xs.pptx?rlkey=719cwwk655ducklwnxo5n8u7z&dl=0)  
