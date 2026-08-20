@@ -1,4 +1,7 @@
-These learning materials are based on [AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 7: Inner Workings of DL  
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 7: Inner Workings of DL  
 
 **Classroom Materials**  
 [Slidedeck: CH07-1 optimization](https://www.dropbox.com/scl/fi/wudc9bgdb9gqr7lsaova4/CH07-1-optimization.pptx?rlkey=usgrdx466wpka141aze0mq3lx&dl=0)  
