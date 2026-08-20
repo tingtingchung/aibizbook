@@ -1,4 +1,7 @@
-These learning materials are based on [AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 9: WEmbeddings, RNN, & LSTM  
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 9: WEmbeddings, RNN, & LSTM  
 
 **Topic 09: Introduction to Language Models**  
 [CH09-1: Featurizing Documents Digitally](https://www.dropbox.com/scl/fi/1nznya5ojltmgz9bipvny/M3-1-featurizing-documents-digitally.pptx?rlkey=xai73tovu307z9nciywwqnur2&dl=0)  
