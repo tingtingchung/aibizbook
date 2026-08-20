@@ -1,4 +1,7 @@
-These learning materials are based on [AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 11: Recommenders 
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 11: Recommenders 
 
 **Classroom Materials**  
 [Slidedeck: Recommenders](https://www.dropbox.com/scl/fi/2fjyzc8bpfzgjt9mle2l4/AIBiz-W3-Vision-Recommenders.pptx?rlkey=6wd6bqlx1tljfrxfk71bt6bw2&dl=0)  
