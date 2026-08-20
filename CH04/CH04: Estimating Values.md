@@ -1,4 +1,7 @@
-[AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 4: Estimating Values
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 4: Estimating Values
 
 **Workshop Materials**  
 [CMU Heinz: From Predicting Future Criminals to GPTs](https://www.dropbox.com/scl/fi/norhw8navh39mfatalzzo/CMU-Heinz-2026-Chung.pptx?rlkey=pncul9h3po8vvp31ax3pagqm9&dl=0)  
