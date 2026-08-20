@@ -1,4 +1,7 @@
-These learning materials are based on [AI for Business Textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) Chapter 5: Making Categorical Decisions   
+Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu  
+
+These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
+Chapter 5: Making Categorical Decisions   
 
 **Classroom Materials**  
 [Slidedeck: Making Categorical Decisions](https://www.dropbox.com/scl/fi/em03z3717u2gtpk99saph/CH05-Making-Categorical-Decisions.pptx?rlkey=o3nqtm20ie2eob7cur0knpfw9&dl=0)  
