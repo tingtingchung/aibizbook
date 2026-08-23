@@ -1,5 +1,5 @@
 # aibizbook
-This is an online repository of resources for the [AI for Business textbook](https://www.vitalsource.com/products/ai-for-business-building-applications-using-tingting-rachel-chung-steve-v9781958303481?term=9781958303481) by Chung &amp; Hojnicki.
+This is an online repository of resources for the [AI for Business textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business) by Chung &amp; Hojnicki.
 
 **Praises**  
 "I really appreciate the business-centered framing of this textbook. Clear positioning at the intersection of AI and business. Unlike most AI/ML texts that are heavily CS-oriented, this book anchors each topic in functional business domains and real-world cases."  
