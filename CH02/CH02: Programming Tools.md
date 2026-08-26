@@ -4,7 +4,7 @@ These learning materials are based on [AI for Business Textbook](https://www.pro
 Chapter 2: Programming Tools  
 
 **Classroom Materials**  
-[Slidedeck: Programming & Math Foundations](https://www.dropbox.com/scl/fi/at6s37m97yhes7gup769x/CH03-Math-Foundations-Part-1-of-2.pptx?rlkey=6if93bllbsk72owbdhvlr1r2n&dl=0)  
+[Lecture Slides](https://www.dropbox.com/scl/fi/9q9ymx58uwl4k5eiemdc2/CH02-Programming-Tools.pptx?rlkey=egmm3yyxtfhyud0n7zlim0lza&dl=0)   
 [Worksheet: Programming & Math](https://docs.google.com/document/d/1DS1WE5bafZCgyPvvi2yl2ug8EsiSbvDgLqxuHubmx2c/edit?tab=t.0)  
 
 **Topic 02: Python Programming**  
