@@ -6,7 +6,7 @@ Chapter 1: What is AI?
 **Classroom Materials**  
 [Chapter 1: What is AI?](https://www.dropbox.com/scl/fi/7j5gd8e83hmp6mpx19tv2/CH01-What-Is-AI.pptx?rlkey=0fr3a9xt596fby890ub302dsx&dl=0)  
 [First Day Discussion Handout](https://docs.google.com/document/d/15b6tKeD7u8Gw_cNKPey31fgkf1r3EFJ1_0OYdZFHRFY/edit?usp=sharing)  
-[Worksheet01: coming soon]()
+[Exercise: Five ways to price a house](https://docs.google.com/presentation/d/1TmzVHojyNyenBaByavcCxlFqAzU8dwpASjYLykdRuIc/edit?slide=id.p1#slide=id.p1)  
 
 **Interactive Demo**  
 [Interactive Timeline of Key AI History Milestones](https://tingtingchung.github.io/aihistory)  
