@@ -5,7 +5,7 @@ Chapter 2: Programming Tools
 
 **Classroom Materials**  
 [Lecture Slides](https://www.dropbox.com/scl/fi/9q9ymx58uwl4k5eiemdc2/CH02-Programming-Tools.pptx?rlkey=egmm3yyxtfhyud0n7zlim0lza&dl=0)   
-[Worksheet: Programming & Math](https://docs.google.com/document/d/1DS1WE5bafZCgyPvvi2yl2ug8EsiSbvDgLqxuHubmx2c/edit?tab=t.0)  
+[Worksheet #02: Programming (CH02) & Math (CH03)](https://docs.google.com/document/d/1OUAOQ0fOb-5ArvoBTY75dDJwVpjZnPLvpBSZh6FIwXo/edit?usp=sharing)  
 
 **Topic 02: Python Programming**  
 [Pandas review](https://drive.google.com/file/d/10Tl_-KXy4JdZTYiZZTHFUdYy276PFbga/view?usp=sharing)  
