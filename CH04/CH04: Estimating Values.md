@@ -3,10 +3,6 @@ Contact author Tingting (Rachel) Chung at tingting at andrew dot cmu dot edu
 These learning materials are based on [AI for Business Textbook](https://www.prospectpressvt.com/textbooks/chung-ai-for-business)  
 Chapter 4: Estimating Values
 
-**Workshop Materials**  
-[CMU Heinz: From Predicting Future Criminals to GPTs](https://www.dropbox.com/scl/fi/norhw8navh39mfatalzzo/CMU-Heinz-2026-Chung.pptx?rlkey=pncul9h3po8vvp31ax3pagqm9&dl=0)  
-[Pitt Psych: How AI Works](https://www.dropbox.com/scl/fi/6y23z0p9z9irymddaqnyj/Pitt-Psych-2026-Chung-How-AI-Wrks.pptx?rlkey=piay0s5fqdn1qz13mhas994u1&dl=0)  
-
 **Single Neuron Simulator**  
 [Single Neuron Simulator video tutorial](https://www.youtube.com/watch?v=9Ig7vG6Kyjg)  
 [Single Neuron Simulator in Google Sheets](https://docs.google.com/spreadsheets/d/1KDGiwAF2GStEZc2WUgbJ7CE7NHktZhAVpcRNulHfqpw/edit?gid=2001141573#gid=2001141573)   
