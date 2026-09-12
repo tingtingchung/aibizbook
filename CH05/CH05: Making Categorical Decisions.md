@@ -14,5 +14,5 @@ Chapter 5: Making Categorical Decisions
 [TF for Classification](https://colab.research.google.com/drive/1F3eQxpTRVYqdAzYn6klXoNSjPeezwWpr?usp=drive_link)  
 [Dummy & One-Hot Encoding](https://colab.research.google.com/drive/1dvuWe_ABHTcLY6xQDkDIFYK5nzcjoslY?usp=drive_link)  
 
-**Operational References**  
+**Optional References**  
 [Thain, N., Pearce, A., Snoek, J., & Pushkarna, M. (2022, March). Are model predictions probabilities?. PAIR.](https://pair.withgoogle.com/explorables/uncertainty-calibration/)   
