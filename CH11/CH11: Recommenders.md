@@ -5,7 +5,7 @@ Chapter 11: Recommenders
 
 **Classroom Materials**  
 [Slidedeck: Recommenders](https://www.dropbox.com/scl/fi/2fjyzc8bpfzgjt9mle2l4/AIBiz-W3-Vision-Recommenders.pptx?rlkey=6wd6bqlx1tljfrxfk71bt6bw2&dl=0)  
-[Worksheet: Recommenders](https://docs.google.com/document/d/16w7A-h3rSFkIVxKcLGsBHFiLfS6iIfZvKHJAb72X37Q/edit?tab=t.0) [solution](https://docs.google.com/document/d/1rViTiMbWpiT-4KA83cJMRVaTCsZRtfvN-UGvow0xe80/edit?tab=t.0)      
+[Worksheet: Recommenders](https://docs.google.com/document/d/16w7A-h3rSFkIVxKcLGsBHFiLfS6iIfZvKHJAb72X37Q/edit?tab=t.0) 
 
 **Recommended Readings**  
 [Recommendation Systems, Google's Advanced Course on Machine Learning](https://developers.google.com/machine-learning/recommendation)  
