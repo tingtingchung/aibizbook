@@ -10,7 +10,7 @@ Chapter 4: Estimating Values
 [Single Neuron Simulator worksheet: Loan Applications](https://docs.google.com/document/d/1VUxvhrI8i_2mxxIqB9e4Y2RZPk69Id76yiddq302e8U/edit?tab=t.0)
 
 **Python Exercises**  
-[Worksheet #04: Keras Sequential() Model](https://docs.google.com/document/d/1rI_D1pnuw6B0uYVt83IXjlJncicE_mbHYp8w6J-_8ks/edit?tab=t.0) [solution](https://docs.google.com/document/d/1-hulZbHPNpVyEsIZJueXaW0HdA4aGA_SYFfOn4hcdqM/edit?usp=drive_link)   
+[Worksheet #04: Keras Sequential() Model](https://docs.google.com/document/d/1rI_D1pnuw6B0uYVt83IXjlJncicE_mbHYp8w6J-_8ks/edit?tab=t.0) 
 [Colab: TF for Regression](https://colab.research.google.com/drive/1ufcwKcDa5GWmbbXbe4cCT7V2gDnmem3b)  
 [Colab: Zillow Data with Tensorflow](https://colab.research.google.com/drive/1fCEu0cIj8raD1o5fqLSLL9j7pgVcCZJ0)  
 
