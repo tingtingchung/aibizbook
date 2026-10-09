@@ -4,7 +4,7 @@ These learning materials are based on [AI for Business Textbook](https://www.pro
 Chapter 10: Large Language Models  
 
 **Worksheets**  
-[Worksheet: Attention in Excel](https://docs.google.com/document/d/188r7gkruEYt2sYw08nMWKXcC4BBVYDvtlk51ny6JnRU/edit?tab=t.0) [PDF](https://drive.google.com/drive/folders/1821OuxBeLK7hk0xZZ1rO9RjKwSFjBmQ1) [solution](https://docs.google.com/document/d/1A5pZrTT0s-mPAK293yLP8ownXJRANCitRqP-CnrqrIM/edit?tab=t.0)    
+[Worksheet: Attention in Excel](https://docs.google.com/document/d/188r7gkruEYt2sYw08nMWKXcC4BBVYDvtlk51ny6JnRU/edit?tab=t.0) [PDF](https://drive.google.com/drive/folders/1821OuxBeLK7hk0xZZ1rO9RjKwSFjBmQ1)  
 
 **Slidedecks**  
 [CH10-1: Vector Similarity](https://www.dropbox.com/scl/fi/vnn860ptbezpuu03ert0d/M4-1B-vector-similarity.pptx?rlkey=4bl3lcdjaxaj0yr44tafcvxh5&dl=0)  
